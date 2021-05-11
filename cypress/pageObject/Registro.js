@@ -31,5 +31,8 @@ export class registro {
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
 
     }
+    funcitontest(){
+        
+    }
 
 }
