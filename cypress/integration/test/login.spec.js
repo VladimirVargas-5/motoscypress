@@ -32,10 +32,10 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         motos.motos()
         regis.registro()
         regis.fill('testname', 'testlastname', '70512345', 'address test', 'ref test', 'https://www.google.com.bo/maps/place/Muebler%C3%ADa+Vasquez/@-16.5239053,-68.0767068,15.23z/data=!4m13!1m7!3m6!1s0x915edf0a04f5a40f:0x57dbfc76b4458ab3!2sLa+Paz!3b1!8m2!3d-16.489689!4d-68.1192936!3m4!1s0x0:0x9a1a5b77a14115c1!8m2!3d-16.5219149!4d-68.0640448?hl=es')
-
+        cy.get(':nth-child(1) > .MuiTypography-h5').should('be.visible')
         
     })
-    it ('ir a pedidos', ()=>{
+    it.skip ('ir a pedidos', ()=>{
         motos.motos()
         hacer_pedido.Hacer_pedido()
         hacer_pedido.search('70708949')
