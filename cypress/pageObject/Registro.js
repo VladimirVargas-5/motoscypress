@@ -34,6 +34,8 @@ export class registro {
     funcitontest(){
         cy.log('prueba')
         cy.log('test')
+        cy.log('prueba')
+        cy.log('test')
     }
 
 }
