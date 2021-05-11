@@ -27,7 +27,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         logout.logout()
 
     })*/
-    it('Ir a Motos', ()=>{
+    it('Crear User', ()=>{
         
         motos.motos()
         regis.registro()
@@ -45,4 +45,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         cy.url().should('contain', 'https://xpress-test-motos-admin.firebaseapp.com/app/orders')
         cy.xpath('//*[@id="root"]/div[1]/div/div/div/div/div/div[1]/div/ul/div[1]/div/div/div/div[1]/div/div/div/div/div[2]/div[3]/h6').should('equal','Repartidor no asignado')
     })
+    it('Edit User', ()=>{
+        
+        motos.motos()
+        regis.search('70020002')
+        regis.edit('edit', 'edit', 'edit','edit')
+        
+    })
+
   })
