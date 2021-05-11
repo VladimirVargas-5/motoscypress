@@ -32,7 +32,7 @@ export class registro {
 
     }
     funcitontest(){
-        
+        cy.log('prueba')
     }
 
 }
