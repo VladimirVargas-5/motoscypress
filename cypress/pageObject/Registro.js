@@ -29,8 +29,13 @@ export class registro {
         cy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(ref1)
         cy.wait(2000)
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
+<<<<<<< HEAD
         cy.log('test')
 
+=======
+>>>>>>> 874cb44856ef6f3477fb2c0c9cd819ee5cd3ae9d
     }
-
+    test(){
+        
+    }
 }
