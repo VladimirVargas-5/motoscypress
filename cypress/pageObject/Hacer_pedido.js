@@ -18,7 +18,5 @@ export class Hacer_pedido {
     solicitar_moto(){
         cy.get('.MuiDialogActions-root > div > .MuiButtonBase-root > .MuiButton-label').click()
     }
-    solicitar_moto(){
-        cy.get('.MuiDialogActions-root > div > .MuiButtonBase-root > .MuiButton-label').click()
-    }
+    
 }

@@ -3,7 +3,7 @@
 export class personal {
     personal(){
         cy.wait(3000)
-        cy.get('.jss63 > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click
+        cy.get('.MuiGrid-root > .MuiButtonBase-root').click
 
     }
     per(){
