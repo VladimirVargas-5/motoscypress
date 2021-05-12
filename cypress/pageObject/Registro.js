@@ -29,6 +29,8 @@ export class registro {
         cy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(ref1)
         cy.wait(2000)
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
-
+    }
+    test(){
+        
     }
 }
