@@ -1,6 +1,6 @@
 {
     "watchForFileChanges": false,
-      "defaultCommandTimeout":30000,
+      "defaultCommandTimeout":40000,
 
       "projectId": "9ambpi"
 
