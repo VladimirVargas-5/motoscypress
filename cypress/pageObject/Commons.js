@@ -5,12 +5,6 @@ export class Commons {
         cy.xpath('/html/body/div[2]/div[3]/ul/li').click({force:true})
                 
     }
-    credentials(val, val2){
-        cy.get(':nth-child(1) > .MuiInputBase-root > .MuiInputBase-input').type(val)
-        cy.wait(3000)
-        cy.get(':nth-child(2) > .MuiInputBase-root > .MuiInputBase-input').type(val2+'{enter}')
-                
-    }
     mainpage(){
         cy.clearCookies()
         cy.clearLocalStorage()
@@ -24,6 +18,9 @@ export class Commons {
         cy.get(':nth-child(1) > .MuiInputBase-root > .MuiInputBase-input').type(val)
         cy.wait(3000)
         cy.get(':nth-child(2) > .MuiInputBase-root > .MuiInputBase-input').type(val2+'{enter}')          
+    }
+    clickmenu(){
+        cy.xpath('//*[@id="root"]/div/header/div/div[1]/button').click({force:true})
     }
 
 }
