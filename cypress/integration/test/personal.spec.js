@@ -16,10 +16,10 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         commons.mainpage()
         commons.login()
         commons.datos('cota@motos.com','sample5')
+        commons.clickmenu()
     })
     
     it ('añadir personal', ()=>{
-        newper.personal()
         newper.per()
         newper.añadir_empleado()
         newper.subir_foto()
