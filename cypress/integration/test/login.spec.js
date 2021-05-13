@@ -28,18 +28,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         
     })
     it('Edit User', ()=>{
-<<<<<<< HEAD
-        
         regis.search('59170512345')
-=======
         motos.motos()
         regis.search('70512345')
->>>>>>> 3f7f6d749d6382bcc5f1d89d66ee4e28d4444524
         regis.edit('edit', 'edit', 'edit','edit')
         cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
         
     })
-<<<<<<< HEAD
     it('Block User', ()=>{
         
         regis.search('59170512345')
@@ -47,11 +42,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
                 
     })
-
-    it.skip ('ir a pedidos', ()=>{
-=======
     it.skip('ir a pedidos', ()=>{
->>>>>>> 3f7f6d749d6382bcc5f1d89d66ee4e28d4444524
         motos.motos()
         hacer_pedido.Hacer_pedido()
         hacer_pedido.search('70708949')
