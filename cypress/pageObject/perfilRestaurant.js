@@ -7,7 +7,6 @@ export class perfilRestaurant {
     }
     editar_datos(value1){
         cy.xpath('//*[@id="root"]/div/div/div/div/div/div/div[3]/form/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div/input').clear().type(value1)
-<<<<<<< HEAD
         cy.get('input[id=logoFile]').attachFile('descarga.jpg')
         cy.wait(2000)
         cy.get('input[id=bannerFile]').attachFile('apple.jpg')
@@ -30,8 +29,6 @@ export class perfilRestaurant {
         cy.get('.jss224 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(nit)
         cy.get('.MuiGrid-justify-xs-center > .MuiBox-root > .MuiButtonBase-root > .MuiButton-label').click()
 
-=======
->>>>>>> d09033c7bea16660a11fdbd396cf6214be678b19
     }
     editar_sucursal(){
         cy.get('[tabindex="-1"] > .MuiTab-wrapper > .jss178').click()
