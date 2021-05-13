@@ -26,11 +26,19 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     })
     it('Edit User', ()=>{
         
-        regis.search('70512345')
+        regis.search('59170512345')
         regis.edit('edit', 'edit', 'edit','edit')
         cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
         
     })
+    it('Block User', ()=>{
+        
+        regis.search('59170512345')
+        regis.block_user('test block')
+        cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
+                
+    })
+
     it.skip ('ir a pedidos', ()=>{
         motos.motos()
         hacer_pedido.Hacer_pedido()
