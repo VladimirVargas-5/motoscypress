@@ -17,7 +17,7 @@ export class registro {
 
     }
     search(number1){
-        cy.get('.form-control').type(number1)
+        cy.get('.form-control').clear().type(number1)
         cy.get('[style="display: flex; justify-content: center; width: 80%;"] > .MuiButtonBase-root > .MuiButton-label').click()
 
     }
@@ -29,5 +29,13 @@ export class registro {
         cy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').clear().type(ref1)
         cy.wait(2000)
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()     
+    }
+    block_user(causa){
+        cy.get(':nth-child(7) > :nth-child(2)').click()
+        //penalizar
+        cy.get(':nth-child(1) > .MuiGrid-grid-xs-2 > .MuiButtonBase-root').click()
+        cy.wait(1000)
+        cy.get(':nth-child(1) > .MuiGrid-grid-xs-10 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(causa)
+        cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
     }
 }
