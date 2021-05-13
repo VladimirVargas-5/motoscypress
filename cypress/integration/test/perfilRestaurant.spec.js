@@ -11,12 +11,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     const perfil = new perfilRestaurant()
     
     beforeEach(()=>{
-        cy.clearCookies()
-        commons.mainpage()
-        cy.clearLocalStorage()
-        commons.login()
-        commons.datos('cota@motos.com','sample5')
+      commons.mainpage()
+      commons.datos('cota@motos.com','sample5')
     })
+    afterEach(()=>{
+      commons.logout()
+    })
+<<<<<<< HEAD
    /* afterEach(()=>{
         logout.logout()
 
@@ -35,3 +36,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 })*/
 })
+=======
+    
+    it('editar perfilRestaurant', ()=>{
+      commons.clickmenu()
+      perfil.perfil_Rest()
+      perfil.editar_datos()
+    })
+  })
+>>>>>>> d09033c7bea16660a11fdbd396cf6214be678b19

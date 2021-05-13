@@ -1,19 +1,16 @@
 /// <reference types="cypress"/>
 export class Commons {
     logout(){
-        cy.xpath('//*[@id="root"]/div/header/div/div[4]/button').click({force:true})
+        cy.get('.MuiAvatar-root > .MuiSvgIcon-root > path').click({force:true})
         cy.xpath('/html/body/div[2]/div[3]/ul/li').click({force:true})
-        cy.get('.jss189 > .MuiButtonBase-root > .MuiButton-label').click()
-                
+        cy.contains('Iniciar Sesión').click()
+        cy.wait(2500)
     }
     mainpage(){
         cy.clearCookies()
         cy.clearLocalStorage()
-        cy.visit('https://xpress-test-motos-admin.firebaseapp.com/home');
-    }
-    login(){
-            cy.get('.jss4 > .MuiBox-root > .MuiButtonBase-root > .MuiButton-label').click()
-            cy.get('.jss17 > .MuiButtonBase-root').click()                
+        cy.visit('https://xpress-test-motos-admin.firebaseapp.com/login');
+        cy.contains('Estoy de acuerdo').click()
     }
     datos(val, val2){
         cy.get(':nth-child(1) > .MuiInputBase-root > .MuiInputBase-input').type(val)
