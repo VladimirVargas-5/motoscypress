@@ -32,15 +32,16 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   it ('agregar sucursal', ()=>{
       commons.clickmenu()
       perfil.perfil_Rest()
-      perfil.agregar_sucursal('prueba1' , 'Pollo' , 'Coc' , 'Centro', 'https://www.google.com.bo/maps/place/Muebler%C3%ADa+Vasquez/@-16.5239053,-68.0767068,15.23z/data=!4m13!1m7!3m6!1s0x915edf0a04f5a40f:0x57dbfc76b4458ab3!2sLa+Paz!3b1!8m2!3d-16.489689!4d-68.1192936!3m4!1s0x0:0x9a1a5b77a14115c1!8m2!3d-16.5219149!4d-68.0640448?hl=es', 'piso 3', 'Manuel' , '78596412', '1593549')
-      cy.xpath('//*[@id="root"]/div[1]/div/div/div/div/div/div[1]/div/ul/div[1]/div/div/div/div[1]/div/div/div/div/div[2]/div[3]/h6').should('equal','Repartidor no asignado')
+      perfil.agregar_sucursal('prueba1' , 'Pollo' , 'Centro', 'piso 3', 'Manuel' , '78596412', '1593549')
       cy.get('.MuiSnackbarContent-message').should('equal','Datos guardados correctamente')
     })
     
 it ('editar sucursal', ()=>{
     commons.clickmenu()
     perfil.perfil_Rest()
-    perfil.editar_sucursal('prueba2' , 'Pablo' , 'CentroSur', '4451211', '1593549' , 'piso 6', 'pizzas')
+    perfil.editar_sucursal('prueba2' , 'Pablo' , 'CentroSur', '4451211', '1593549' , 'piso 6')
     cy.contains('Datos guardados correctamente').should('equal','Datos guardados correctamente')
+    
+    })
+
 })
-  })

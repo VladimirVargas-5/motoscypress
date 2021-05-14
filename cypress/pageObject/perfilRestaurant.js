@@ -14,7 +14,7 @@ export class perfilRestaurant {
         cy.get('[style="margin-top: 32px;"] > .MuiButtonBase-root').click()
         cy.wait(5000)
     }
-    agregar_sucursal(value1, categoria, ciudad, address,url, piso, gerente, telefono, nit ){
+    agregar_sucursal(value1, categoria, address, piso, gerente, telefono, nit ){
         cy.contains('Sucursales').click()
         cy.wait(1000)
         cy.contains('Agregar Sucursal').click()
@@ -34,7 +34,7 @@ export class perfilRestaurant {
         cy.get('.MuiGrid-justify-xs-center > .MuiBox-root > .MuiButtonBase-root > .MuiButton-label').click()
 
     }
-    editar_sucursal(nombre, gerente, address, telefono, nit, piso, ciudad, categoria){
+    editar_sucursal(nombre, gerente, address, telefono, nit, piso){
         cy.contains('Sucursales').click()
         cy.wait(1000)
         cy.get(':nth-child(1) > :nth-child(7) > .MuiBox-root > .MuiTypography-root').click()
