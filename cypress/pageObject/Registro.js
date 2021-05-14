@@ -43,8 +43,7 @@ export class registro {
                 cy.wait(1000)
                 cy.get(':nth-child(1) > .MuiGrid-grid-xs-10 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(texto)
                 cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
-                
-                
+                       
             }
             else{
                 cy.log(text)
@@ -52,13 +51,15 @@ export class registro {
                 cy.get(':nth-child(1) > .MuiGrid-grid-xs-2 > .MuiButtonBase-root').click()
                 cy.wait(1000)
                 cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
-                
-    
-    
+             
             }
-
         })
         
         
     }
+    view(){
+        cy.get(':nth-child(7) > :nth-child(3)').click()
+        }
+
+
 }

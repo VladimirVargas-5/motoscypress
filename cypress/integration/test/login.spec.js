@@ -34,7 +34,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
         
     })
-    it('Block User', ()=>{
+    it.skip('Block User', ()=>{
         motos.motos()
         regis.search('59170512345')
         regis.block_user('test block')
@@ -42,6 +42,16 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         
                 
     })
+    it('View User', ()=>{
+        motos.motos()
+        regis.search('59170512345')
+        regis.view()
+        cy.get('.MuiGrid-root > .MuiPaper-root > :nth-child(1) > .MuiBox-root').should('be.visible')
+        
+                
+    })
+    
+
     it.skip('ir a pedidos', ()=>{
         motos.motos()
         hacer_pedido.Hacer_pedido()
