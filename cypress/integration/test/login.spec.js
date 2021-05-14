@@ -19,7 +19,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     afterEach(()=>{
         commons.logout()
     })
-    it('Crear User', ()=>{   
+    it.skip('Crear User', ()=>{   
         motos.motos()
         regis.registro()
         regis.fill('testname', 'testlastname', '70512345', 'address test', 'ref test', 'https://www.google.com.bo/maps/place/Muebler%C3%ADa+Vasquez/@-16.5239053,-68.0767068,15.23z/data=!4m13!1m7!3m6!1s0x915edf0a04f5a40f:0x57dbfc76b4458ab3!2sLa+Paz!3b1!8m2!3d-16.489689!4d-68.1192936!3m4!1s0x0:0x9a1a5b77a14115c1!8m2!3d-16.5219149!4d-68.0640448?hl=es')
@@ -27,19 +27,19 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         
         
     })
-    it('Edit User', ()=>{
-        regis.search('59170512345')
+    it.skip('Edit User', ()=>{
         motos.motos()
-        regis.search('70512345')
+        regis.search('59170512345')
         regis.edit('edit', 'edit', 'edit','edit')
         cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
         
     })
     it('Block User', ()=>{
-        
+        motos.motos()
         regis.search('59170512345')
         regis.block_user('test block')
         cy.get('.MuiSnackbar-root > .MuiPaper-root').should('be.visible')
+        
                 
     })
     it.skip('ir a pedidos', ()=>{

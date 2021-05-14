@@ -31,11 +31,34 @@ export class registro {
         cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()     
     }
     block_user(causa){
+        cy.wait(2000)
         cy.get(':nth-child(7) > :nth-child(2)').click()
-        //penalizar
-        cy.get(':nth-child(1) > .MuiGrid-grid-xs-2 > .MuiButtonBase-root').click()
-        cy.wait(1000)
-        cy.get(':nth-child(1) > .MuiGrid-grid-xs-10 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(causa)
-        cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
+        const texto = causa
+                //penalizar
+        cy.get(':nth-child(1) > .MuiGrid-grid-xs-2 > .MuiButtonBase-root').invoke('text').then((text)=>{
+            if(text=='PENALIZAR USUARIO'){
+                cy.log(text)
+                cy.wait(1000)
+                cy.get(':nth-child(1) > .MuiGrid-grid-xs-2 > .MuiButtonBase-root').click()
+                cy.wait(1000)
+                cy.get(':nth-child(1) > .MuiGrid-grid-xs-10 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(texto)
+                cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
+                
+                
+            }
+            else{
+                cy.log(text)
+                cy.wait(1000)
+                cy.get(':nth-child(1) > .MuiGrid-grid-xs-2 > .MuiButtonBase-root').click()
+                cy.wait(1000)
+                cy.get('.MuiDialogActions-root > .MuiButtonBase-root').click()
+                
+    
+    
+            }
+
+        })
+        
+        
     }
 }
