@@ -23,6 +23,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
       newper.añadir_empleado()
       newper.subir_foto()
       cy.wait(3000)
-      newper.llenar_datos('Marianela', 'Rojas','marianela789@gmail.com','78965412','Cajero','Cerca Suiza')   
+      newper.llenar_datos('Marianela', 'Rojas','marianela789@gmail.com','78965412','Cajero','Cerca Suiza')
     })
   })

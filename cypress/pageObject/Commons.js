@@ -20,5 +20,10 @@ export class Commons {
     clickmenu(){
         cy.xpath('//*[@id="root"]/div/header/div/div[1]/button').click({force:true})
     }
+    Cambio_Sucursal(value){ //mandar el numero de la posicion de la sucursal
+        cy.get('div.MuiDrawer-root.MuiDrawer-modal div > button > span.MuiButton-label').click({force:true})
+        cy.xpath('//*[@id="simple-menu"]/div[3]/ul/li['+value+']').click({force:true})
+    }
+
 
 }
