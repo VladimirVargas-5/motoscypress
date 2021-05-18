@@ -42,7 +42,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         
                 
     })
-    it('View User', ()=>{
+    it.skip('View User', ()=>{
         motos.motos()
         regis.search('59170512345')
         regis.view()
@@ -50,9 +50,18 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         
                 
     })
+    it('View Historial', ()=>{
+        motos.motos()
+        regis.search('59170512345')
+        regis.historial()
+        cy.get('#filterStatus').should('be.visible')
+                        
+    })
+
+    
     
 
-    it.skip('ir a pedidos', ()=>{
+    it('ir a pedidos', ()=>{
         motos.motos()
         hacer_pedido.Hacer_pedido()
         hacer_pedido.search('70708949')

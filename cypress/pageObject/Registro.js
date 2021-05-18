@@ -61,5 +61,10 @@ export class registro {
         cy.get(':nth-child(7) > :nth-child(3)').click()
         }
 
+    historial(){
+        cy.get(':nth-child(7) > :nth-child(3)').click()
+        cy.xpath('//*[@id="root"]/div/div/div/div/div/div/div[2]/header/div/div[2]/div/button[2]').click()
+    }
+
 
 }
